@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.top{
+    position: relative;
+    background-color: rgba(0, 128, 128, 0.5);
+    height: 100vh;
+    min-height: 200px;
+    background-image: url(images/cloud.png),url(images/cloud.png),url(images/mountain.png);
+    background-position: left 0 top 0, right 0 top 50px, bottom 0 center;
+    background-repeat: no-repeat;
+    background-size: 15%;
+}
+.nav-toggle{
+    display: none;
+}
+.nav-list{
+    list-style-type: none;
+    justify-content: right;
+    align-items: center;
+}
+.nav-list-anchor{
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    transition: 1s;
+}
+.nav-list-anchor:hover{
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.nav-list-anchor:active{
+    background-color: teal;
+}
+.nav-header{
+    font-family: 'Indie Flower', cursive;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 95%;
+    word-break: break-all;
+    transform: translate(-50%, -50%);
+}
+.nav-header-span{
+    display: none;
+}
+.nav-header::after{
+    content: "|";
+    animation-name: blick;
+    animation-duration: .6s;
+    animation-iteration-count: infinite;
+}
+.nav-header::before{
+    content: "";
+    animation-name: write;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blick{
+    0%{color: transparent;}
+    100%{color: #fff;}
+}
+
+@keyframes write{
+    0%{content: "";}
+    6.25%{content: "I";}
+    12.5%{content: "I'";}
+    18.75%{content: "I'm";}
+    25%{content: "I'm a";}
+    31.25%{content: "I'm a W";}
+    37.5%{content: "I'm a WE";}
+    43.75%{content: "I'm a WEB";}
+    50%{content: "I'm a WEB D";}
+    56.25%{content: "I'm a WEB DE";}
+    62.5%{content: "I'm a WEB DEV";}
+    68.75%{content: "I'm a WEB DEVE";}
+    75%{content: "I'm a WEB DEVEL";}
+    81.25%{content: "I'm a WEB DEVELO";}
+    87.5%{content: "I'm a WEB DEVELOP";}
+    93.75%{content: "I'm a WEB DEVELOPE";}
+    100%{content: "I'm a WEB DEVELOPER";}
+}
+
+@media only screen and (max-width:576px){
+    .nav-toggle{
+        display: block;
+        margin-left: auto;
+        padding: 5px;
+        color: #000;
+        background-color: transparent;
+    }
+    .nav-list{
+        display: none;
+        padding: 0 !important;
+    }
+    .nav-list-anchor{
+        padding: 5px;
+        display: block;
+        text-align: left;
+    }
+}
+
+/* SECTION 2 */
+.section2{
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.section2-img-con{
+    text-align: center;
+    order: 2;
+}
+.section2-img{
+    border-radius: 100%;
+    width: 400px;
+    height: 400px;
+}
+.section2-name{
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    order: 1;
+}
+@media only screen and (max-width:576px){
+    .section2{
+        flex-wrap: wrap;
+    }
+    .section2-img-con{
+        order: 1;
+        width: 100%;
+        margin: 10px 0;
+    }
+    .section2-img{
+        width: 100%;
+        height: 400px;
+    }
+    .section2-name{
+        order: 2;
+        width: 100%;
+        /* margin: 20px 0; */
+    }
+}
+
+/* section3 */
+.section3{
+    text-align: justify;
+}
+.section3-header{
+    text-align: center;
+}
+@media only screen and (max-width:576px){
+    .section3{
+        padding: 10px;
+    }
+}
+
+/* section4 CONTACT */
+.section4-contact{
+    align-items: center;
+}
+.section4-icon-con{
+    /* text-align: center; */
+}
+.section4-icon-anchor, .section4-icon-anchor:hover{
+    text-decoration: none;
+    color: teal;
+    display: block;
+}
+textarea::placeholder{
+    font-style: italic;
+}
+
+.footer{
+    text-align: center;
+    font-style: italic;
+    font-size: 13px;
+    background-color: rgba(0, 128, 128, 0.5);
+}
