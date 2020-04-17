@@ -1,4 +1,4 @@
-var myToggle = document.getElementById("nav-toggle");
+var myToggle = document.getElementById("home");
 var myList = document.getElementById("nav-list")
 
 function screenResize(){

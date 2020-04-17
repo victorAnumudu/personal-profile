@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+@media only screen and (max-width:576px){
+    .container{
+        width: 95% !important;
+    }
+}
 .top{
     position: relative;
     background-color: rgba(0, 128, 128, 0.5);
@@ -12,6 +18,13 @@
     background-position: left 0 top 0, right 0 top 50px, bottom 0 center;
     background-repeat: no-repeat;
     background-size: 15%;
+}
+@media only screen and (max-width:992px){
+    .top{
+        height: 50vh;
+        min-height: 200px;
+        background-size: 15%;
+    }
 }
 .nav-toggle{
     display: none;
@@ -109,34 +122,46 @@
         display: block;
         text-align: left;
     }
+    .nav-header{
+        font-weight: 600;
+        top: 80%;
+        left: 50%;
+    }
 }
 
 /* SECTION 2 */
 .section2{
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     align-items: center;
 }
 .section2-img-con{
     text-align: center;
-    order: 2;
 }
 .section2-img{
     border-radius: 100%;
     width: 400px;
     height: 400px;
 }
-.section2-name{
+.section2-about{
     font-family: 'Indie Flower', cursive;
     text-align: center;
-    order: 1;
+}
+.section2-header4{
+    padding: 5px 0;
+    font-size: 16px;
+}
+.left{
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(0, 128, 128);
 }
 @media only screen and (max-width:576px){
     .section2{
+        justify-content: left;
         flex-wrap: wrap;
     }
     .section2-img-con{
-        order: 1;
         width: 100%;
         margin: 10px 0;
     }
@@ -144,29 +169,33 @@
         width: 100%;
         height: 400px;
     }
-    .section2-name{
-        order: 2;
+    .section2-about{
         width: 100%;
-        /* margin: 20px 0; */
     }
 }
 
 /* section3 */
 .section3{
     text-align: justify;
+    padding: 10px 0;
 }
 .section3-header{
     text-align: center;
 }
 @media only screen and (max-width:576px){
     .section3{
+        width: 100%;
         padding: 10px;
     }
 }
 
 /* section4 CONTACT */
 .section4-contact{
+    justify-content: space-between;
     align-items: center;
+}
+.contact{
+    text-align: center;
 }
 .section4-icon-con{
     /* text-align: center; */
@@ -176,6 +205,12 @@
     color: teal;
     display: block;
 }
+form{
+    background-color: rgba(0, 128, 128, 0.1);
+}
+legend{
+    text-align: center;
+}
 textarea::placeholder{
     font-style: italic;
 }
@@ -184,5 +219,5 @@ textarea::placeholder{
     text-align: center;
     font-style: italic;
     font-size: 13px;
-    background-color: rgba(0, 128, 128, 0.5);
+    background-color: rgba(0, 128, 128, 0.1);
 }
