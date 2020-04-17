@@ -144,7 +144,7 @@
     height: 400px;
 }
 .section2-about{
-    font-family: 'Indie Flower', cursive;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
 }
 .section2-header4{
@@ -194,11 +194,11 @@
     justify-content: space-between;
     align-items: center;
 }
+.my-contact-info-header{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 .contact{
     text-align: center;
-}
-.section4-icon-con{
-    /* text-align: center; */
 }
 .section4-icon-anchor, .section4-icon-anchor:hover{
     text-decoration: none;
