@@ -1,55 +1,61 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-@media only screen and (max-width:576px){
-    .container{
-        width: 95% !important;
-    }
-}
 .top{
-    position: relative;
-    background-color: rgba(0, 128, 128, 0.5);
-    height: 100vh;
-    min-height: 200px;
-    background-image: url(images/cloud.png),url(images/cloud.png),url(images/mountain.png);
-    background-position: left 0 top 0, right 0 top 50px, bottom 0 center;
-    background-repeat: no-repeat;
-    background-size: 15%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
 }
-@media only screen and (max-width:992px){
-    .top{
-        height: 50vh;
-        min-height: 200px;
-        background-size: 15%;
-    }
-}
+
 .nav-toggle{
     display: none;
 }
 .nav-list{
+    display: flex;
     list-style-type: none;
     justify-content: right;
     align-items: center;
 }
 .nav-list-anchor{
     display: block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: 700;
-    color: #fff;
+    padding: 20px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgb(66, 66, 66);
+    border-bottom: 5px solid #fff;
     transition: 1s;
 }
 .nav-list-anchor:hover{
     text-decoration: none;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid rgb(66, 66, 66);
 }
-.nav-list-anchor:active{
-    background-color: teal;
+
+/* image slide show section */
+.image-slide{
+    /* padding: 10px 0; */
+    height: 300px;
+    background-color: #000;
+    background-image: url("images/slide1.jpg");
+    background-size: 100% 100%;
 }
+.image-overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .nav-header{
     font-family: 'Indie Flower', cursive;
     color: #fff;
@@ -57,12 +63,7 @@
     text-align: center;
     border-radius: 5px;
     font-size: 2em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 95%;
     word-break: break-all;
-    transform: translate(-50%, -50%);
 }
 .nav-header-span{
     display: none;
@@ -104,36 +105,33 @@
     93.75%{content: "I'm a WEB DEVELOPE";}
     100%{content: "I'm a WEB DEVELOPER";}
 }
+/* END of image slide show section */
 
-@media only screen and (max-width:576px){
-    .nav-toggle{
-        display: block;
-        margin-left: auto;
-        padding: 5px;
-        color: #000;
-        background-color: transparent;
-    }
-    .nav-list{
-        display: none;
-        padding: 0 !important;
-    }
-    .nav-list-anchor{
-        padding: 5px;
-        display: block;
-        text-align: left;
-    }
-    .nav-header{
-        font-weight: 600;
-        top: 80%;
-        left: 50%;
-    }
+.image{
+    display: flex;
+    overflow-x: scroll;
+    margin: 20px;
+}
+.my-images{
+    width: 350px;
+    height: 200px;
+    margin: 10px;
 }
 
 /* SECTION 2 */
-.section2{
-    justify-content: center;
+.about-section{
+    padding: 20px;
+}
+.about-header{
+    text-align: center;
+    color: rgb(66, 66, 66);
+}
+.about{
+    display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
+    padding: 20px;
 }
 .section2-img-con{
     text-align: center;
@@ -143,9 +141,10 @@
     width: 400px;
     height: 400px;
 }
-.section2-about{
+.about-content{
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
+    padding: 0 20px;
 }
 .section2-header4{
     padding: 5px 0;
@@ -156,68 +155,160 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(0, 128, 128);
 }
-@media only screen and (max-width:576px){
-    .section2{
-        justify-content: left;
-        flex-wrap: wrap;
-    }
-    .section2-img-con{
-        width: 100%;
-        margin: 10px 0;
-    }
-    .section2-img{
-        width: 100%;
-        height: 400px;
-    }
-    .section2-about{
-        width: 100%;
-    }
+.right{
+    color: rgb(66, 66, 66);
 }
+
+
 
 /* section3 */
 .section3{
-    text-align: justify;
-    padding: 10px 0;
+    text-align: left;
+    padding: 20px;
 }
 .section3-header{
     text-align: center;
 }
-@media only screen and (max-width:576px){
-    .section3{
-        width: 100%;
-        padding: 10px;
-    }
+.section3 p{
+    color: rgb(66, 66, 66);
 }
+
 
 /* section4 CONTACT */
 .section4-contact{
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
 }
 .my-contact-info-header{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .contact{
     text-align: center;
+    width: 50%;
 }
-.section4-icon-anchor, .section4-icon-anchor:hover{
-    text-decoration: none;
-    color: teal;
-    display: block;
+.contact-me{
+    width: 50%;
 }
-form{
-    background-color: rgba(0, 128, 128, 0.1);
+fieldset{
+    border: none;
 }
 legend{
-    text-align: center;
+    margin: auto;
+}
+label, input{
+    width: 100%;
+}
+textarea{
+    width: 100%;
+    resize: none;
+    margin: 10px 0;
 }
 textarea::placeholder{
     font-style: italic;
 }
+button{
+    border-radius: 5px;
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+.folio{
+    padding: 20px;
+}
+.portfolio{
+    text-align: center;
+}
+.folio-link{
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+}
 
 .footer{
-    text-align: center;
+    margin-top: 10px;
+    text-align: right;
     font-style: italic;
     font-size: 13px;
-    background-color: rgba(0, 128, 128, 0.1);
+    color: #fff;
+    padding: 10px;
+    background-color: rgb(66, 66, 66);
+}
+
+
+
+@media only screen and (max-width:992px){
+    
+    
+}
+
+
+@media only screen and (max-width:768px){
+    
+    
+}
+
+
+@media only screen and (max-width:576px){
+    .top{
+        display: block;
+        position: relative;
+    }
+    
+    .nav-toggle{
+        display: block;
+        margin-left: auto;
+        padding: 10px;
+    }
+    .nav-list{
+        display: block;
+        position: absolute;
+        left: -300%;
+        transition: 3s;
+        background-color: #fff;
+        width: 150px;
+    }
+    .nav-list-show{
+        display: block;
+        transition: .5s;
+        left: 0;
+    }
+
+    /* SECTION 2 */
+    .about{
+        display: block;
+        padding: 0px;
+    }
+    .section2-img{
+        border-radius: 0;
+        width: 90%;
+        height: auto;
+    }
+    .about-content{
+        padding: 0px;
+    }
+
+    /* section3 */
+    .section3{
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* section4 CONTACT */
+    .section4-contact{
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .contact{
+        width: 100%;
+    }
+    .contact-me{
+        width: 100%;
+    }
+
+    .footer{
+        text-align: center;
+    }
 }

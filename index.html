@@ -5,42 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile Page</title>
     <link rel="icon" href="images/profile-logo.png" type="x/icon">
-    <script src="https://kit.fontawesome.com/4ea96ace4f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
-<body onresize="screenResize()">
-    <div class="container-fluid p-0">
+<body>
+    <div class="over-all-container">
         <!-- navigation section -->
         <nav class="top">
 
-            <button class="nav-toggle" id="home" onclick="showNav()">MENU</button>
+            <button class="nav-toggle" id="nav-toggle">MENU</button>
 
             <!-- navigation link-->
-            <ul class="nav-list row no-gutters p-0 m-0" id="nav-list">
+            <ul class="nav-list" id="nav-list">
                 <li class="nav-list-item"><a href="#home" class="nav-list-anchor">Home</a></li>
                 <li class="nav-list-item"><a href="#about" class="nav-list-anchor">About</a></li>
                 <li class="nav-list-item"><a href="#obj" class="nav-list-anchor">Objective(s)</a></li>
                 <li class="nav-list-item"><a href="#contact" class="nav-list-anchor">Contact</a></li>
             </ul>
-            <h1 class="nav-header"><span class="nav-header-span">I'm a WEB DEVELOPER</span></h1>
+            
         </nav>
         <!-- END of navigation section -->
 
-        <div class="container p-0">
+        <!-- image slide show -->
+        <div class="image-slide">
+            <div class="image-overlay">
+                <h1 class="nav-header"><span class="nav-header-span">I'm a WEB DEVELOPER</span></h1>
+            </div>
+        </div>
+        <!--END of image slide show -->
 
-            <div class="section2 row no-gutters p-0 m-0" id="about">
+        <!-- END of section3 About -->
+        <div class="about-section" id="about">
+            <h2 class="about-header">About Me!</h2>
+            <div class="about">
                 <div class="section2-img-con">
                     <img src="images/img66.png" class="section2-img" alt="My Image">
                 </div>
-                <div class="section2-about py-5">
+                <div class="about-content">
                     <h4 class="section2-header4">
                         <span class="left">Name:</span> <br> <span class="right">Anumudu Chukwuebuka Victor</span>
                     </h4>
@@ -57,9 +57,6 @@
                         <span class="left">Home Town:</span> <br> <span class="right">Akatta</span>
                     </h4>
                     <h4 class="section2-header4">
-                        <span class="left">Intership ID:</span> <br> <span class="right">SNG-01312</span>
-                    </h4>
-                    <h4 class="section2-header4">
                         <span class="left">Address:</span> <br> 
                         <span class="right">Plot 1 WBHE Umuahia, Abia State Nigeria</span>
                     </h4>
@@ -68,47 +65,66 @@
                     </h4>
                 </div>
             </div>
-    
-            <!-- section3 About -->
-            <div class="section3">
-                <h3 class="section3-header" id="obj">Objective(s)</h3>
-                <p class="section3-para">Passionate about developing a long-term relationship, build a career in a standard organization where my skills, passion for technology and learning can be utilized to enable the organization achieve her corporate objective(s) and to work in a career challenging firm as it will help develop my ideas, skills and knowledge , in order to become an effective and efficient personnel.</p>
-            </div>
-            <!-- END of section3 About -->
-    
-            <!-- section4 Contact -->
-            <div class="section4-contact container-fluid row no-gutters p-0 m-0" id="contact">
-                <div class="contact col-sm-6">
-                    <div class="my-contact-info container-fluid p-0 m-0">
-                        <h4 class="my-contact-info-header">Hot Lines: <br> +2347036251482, +2349063572875 </h4>
-                        <p class="my-contact-info-para">anumuduchukwuebuka@gmail.com</p>
-                    </div>
-                </div>
+        </div>
+        <!-- END of section3 About -->
 
-                <div class="contact-me col-sm-6">
-                    <form action="" class="container-fluid">
-                        <fieldset>
-                            <legend>Contact Me</legend>
-                            <label for="fname" class="container-fluid p-0 m-0">Firstname</label>
-                            <input type="text" id="fname" class="container-fluid p-0 m-0">
-                            <label for="lname" class="container-fluid p-0 m-0">Lastname</label>
-                            <input type="text" id="lname" class="container-fluid p-0 m-0">
-                            <label for="email" class="container-fluid p-0 m-0">Email</label>
-                            <input type="text" id="email" class="container-fluid p-0 m-0">
-                            <label for="phone" class="container-fluid p-0 m-0">Phone Number</label>
-                            <input type="text" id="phone" class="container-fluid p-0 m-0">
-                            <textarea name="" id="" cols="30" rows="5" class="container-fluid p-0 mt-2" placeholder="Please drop a message if you wish!"></textarea>
-                            <button>Submit</button>
-                        </fieldset>
-                    </form>
+         <!-- image -->
+         <div class="image">
+            <img src="images/image1.jpg" class="my-images" alt="my-image">
+            <img src="images/image2.jpg" class="my-images" alt="my-image">
+            <img src="images/image3.jpg" class="my-images" alt="my-image">
+            <img src="images/image4.jpg" class="my-images" alt="my-image">
+            <img src="images/image5.jpg" class="my-images" alt="my-image">
+        </div>
+        <!--END of image -->
+
+
+        <!-- section3 Objective -->
+        <div class="section3">
+            <h3 class="section3-header" id="obj">Objective(s)</h3>
+            <p class="section3-para">Passionate about developing a long-term relationship, build a career in a standard organization where my skills, passion for technology and learning can be utilized to enable the organization achieve her corporate objective(s) and to work in a career challenging firm as it will help develop my ideas, skills and knowledge , in order to become an effective and efficient personnel.</p>
+        </div>
+        <!-- END of section3 Objective -->
+
+        <!-- section4 Contact -->
+        <div class="section4-contact" id="contact">
+            <div class="contact">
+                <div class="my-contact-info">
+                    <h4 class="my-contact-info-header">Hot Lines: <br> +2347036251482, +2349063572875 </h4>
+                    <p class="my-contact-info-para">anumuduchukwuebuka@gmail.com</p>
                 </div>
             </div>
-            <!-- END of section4 Contact -->
 
+            <div class="contact-me">
+                <form action="">
+                    <fieldset>
+                        <legend>Contact Me</legend>
+                        <label for="fname" class="">Firstname</label>
+                        <input type="text" id="fname" class="">
+                        <label for="lname" class="">Lastname</label>
+                        <input type="text" id="lname" class="">
+                        <label for="email" class="">Email</label>
+                        <input type="text" id="email" class="">
+                        <label for="phone" class="">Phone Number</label>
+                        <input type="text" id="phone" class="">
+                        <textarea name="" id="" cols="30" rows="5" placeholder="Please drop a message if you wish!"></textarea>
+                        <button>Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <!-- END of section4 Contact -->
+
+        <div class="folio">
+            <h2 class="portfolio">links to some of my work</h2>
+            <a href="https://victoranumudu.github.io/sterling-bank/" class="folio-link" target="_blank">Sterling Bank home page</a>
+            <a href="https://victoranumudu.github.io/first-bank/" class="folio-link" target="_blank">Firstbank Bank home page</a>
+            <a href="https://victoranumudu.github.io/dumont-hotel/" class="folio-link" target="_blank">Dumont Hotel</a>
         </div>
 
+
         <!-- section footer -->
-        <p class="footer mt-5 mb-0">&copy; Anumudu Chukwuebuka 2020</p>
+        <p class="footer">&copy; Anumudu Chukwuebuka 2020</p>
 
     </div>
 
