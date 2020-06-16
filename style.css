@@ -208,7 +208,7 @@ textarea{
 textarea::placeholder{
     font-style: italic;
 }
-button{
+.btn{
     border-radius: 5px;
     display: block;
     margin: 10px auto;
